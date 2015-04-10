@@ -1,0 +1,71 @@
+.ui-box {
+    background-color: #e87352;
+    width: 300px;
+    padding: 10px;    
+    margin: 25px;
+    max-width: 80%; 
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.ui-box-1 {
+    background-color: #ebc85e;
+    width: 300px;
+    padding: 10px;    
+    margin: 25px;
+    max-width: 80%; 
+    margin-left: auto;
+    margin-right: auto;"
+}
+
+.ui-box-2 {
+    background-color: #3bbec0;
+    width: 300px;
+    padding: 10px;    
+    margin: 25px;
+    max-width: 80%; 
+    margin-left: auto;
+    margin-right: auto;"
+}
+
+
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+#scroller ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
