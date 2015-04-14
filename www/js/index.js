@@ -7,7 +7,7 @@ var isOverlap = true; //true: overlap, false: split
 var isTest = true;
 
 document.addEventListener("deviceready", function(){
-            alert('Começou');
+          
             window.admob.setUp(adUnit, adUnitFullScreen, isOverlap, isTest);
 
             //banner ad callback

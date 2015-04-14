@@ -13,4 +13,5 @@
 <preference name="ios-target" value="6"/>
 <preference name="ios-configuration" value="adhoc"/>
 <preference name="exit-on-suspend" value="false"/>
+<preference name="Fullscreen" value="false"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>
