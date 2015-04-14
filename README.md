@@ -1,2 +1,0 @@
-# irregular
-Easy irregular verbs

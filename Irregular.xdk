@@ -1,0 +1,256 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.2",
+    "creationData": {
+      "type": "Import",
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "",
+      "projectGuid": "0758990e-69d4-4b7b-a2cf-c07fd6baa308",
+      "lastModifiedDate": 1429033115360,
+      "creationDate": 1428951135344
+    },
+    "sourceDirectory": "www",
+    "cordovaPluginsDirectory": "plugins",
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "startFile": "index.html",
+    "projectTags": [],
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [],
+    "cordovaPlugins": [
+      {
+        "id": "org.apache.cordova.device",
+        "version": "0.2.13",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "com.cranberrygame.phonegap.plugin.ad.admob",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.camera",
+        "version": "0.3.4",
+        "selectedState": "Excluded",
+        "data": {},
+        "paramvals": {},
+        "checksum": "af698adcc73a104fcaabf4ed1c3e3256785e0f27f7932252186c4b0f7f455947",
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.media-capture",
+        "version": "0.3.5",
+        "selectedState": "Excluded",
+        "data": {},
+        "paramvals": {},
+        "checksum": "9f5cf79e645d9f7992351c959b8ecfa21c0005e4390fe5a52ec4e58f10b6b0ca",
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.network-information",
+        "version": "0.2.14",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.file",
+        "version": "1.3.2",
+        "selectedState": "Excluded",
+        "data": {},
+        "paramvals": {},
+        "checksum": "ae85da67aca33474ca304ca1b41f756bff87bd687882dbd65a081a1128c62f85",
+        "dependsOn": [],
+        "dependedBy": []
+      }
+    ],
+    "serviceMethods": [],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "10",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
+        },
+        "isActive_": true,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "10",
+        "cordovaCLIVersion_": "4.1.2"
+      },
+      "Android-Crosswalk": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android-Crosswalk",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
+        },
+        "isActive_": false,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "10",
+        "cordovaCLIVersion_": "4.1.2"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "ios-target": "6",
+          "ios-configuration": "adhoc",
+          "exit-on-suspend": false
+        },
+        "isActive_": true,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "cordovaCLIVersion_": "4.1.2",
+        "iosProvs_": []
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "4.1.2"
+      },
+      "WebApp": {
+        "platform_": "webapp",
+        "runtime_": "W3C",
+        "name_": "WebApp",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Firefox": {
+        "platform_": "firefoxos",
+        "runtime_": "W3C on Firefox OS",
+        "name_": "Firefox",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Chrome": {
+        "platform_": "chromeos",
+        "runtime_": "W3C on Chrome OS",
+        "name_": "Chrome",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Facebook": {
+        "platform_": "facebook",
+        "runtime_": "W3C on Facebook",
+        "name_": "Facebook",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "Irregular",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      }
+    }
+  }
+}

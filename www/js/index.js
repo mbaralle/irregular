@@ -1,6 +1,41 @@
 var verbsGlobal;
 var actualVerb;
 
+var adUnit = "ca-app-pub-5978610397346153/5966821227";
+var adUnitFullScreen = "ca-app-pub-5978610397346153/7443554423";
+var isOverlap = true; //true: overlap, false: split
+var isTest = true;
+
+document.addEventListener("deviceready", function(){
+            alert('Começou');
+            window.admob.setUp(adUnit, adUnitFullScreen, isOverlap, isTest);
+
+            //banner ad callback
+            window.admob.onBannerAdPreloaded = function() {
+                alert('onBannerAdPreloaded');
+                window.admob.showBannerAd('bottom-center', 'SMART_BANNER');
+            };
+            window.admob.onBannerAdLoaded = function() {
+                alert('onBannerAdLoaded');
+            };
+            //full screen ad callback
+            window.admob.onFullScreenAdPreloaded = function() {
+                alert('onFullScreenAdPreloaded');
+            };
+            window.admob.onFullScreenAdLoaded = function() {
+                alert('onFullScreenAdLoaded');
+            };
+            window.admob.onFullScreenAdShown = function() {
+                alert('onFullScreenAdShown');
+            };
+            window.admob.onFullScreenAdHidden = function() {
+                alert('onFullScreenAdHidden');
+            };
+            
+            window.admob.preloadBannerAd();
+           
+}, false);
+
 var myScroll;
 
 function loaded () {
@@ -8,9 +43,6 @@ function loaded () {
 
     console.log("loaded");
 }
-
-
-
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -47,11 +79,16 @@ $(function() {
     }
 
     function addVerbList() {
+
+        $("#list-irregular-verbs").empty();
+
         for (var i = 0; i < verbsGlobal.length; i++) {
             $("#list-irregular-verbs").append("<li class='item-list' value='"  + i + "''><a href='#item-verb'>" + verbsGlobal[i].normal + "</a></li>");            
         };
 
         
+        $(".item-list").unbind("click");   
+
         $(".item-list").click(function() {
             console.log($( this ).val());
 
@@ -63,13 +100,17 @@ $(function() {
             $("#actual-past-verb").text(actualVerb.past);
             $("#actual-past-participle").text(actualVerb.participle);    
 
-             myScroll = new IScroll('#wrapper', { mouseWheel: true, disableTouch: false, click: true});  
+            var owl = $("#owl-actual-verbs").data('owlCarousel');
+            owl.goTo(0)   
+
+           //  myScroll = new IScroll('#wrapper', { mouseWheel: true, disableTouch: false, click: true});  
         })
     }
 
     var resposta = 0;
     var past = "";
     var participle = "";
+    var pontos = 0;
 
     function onPageGameShow() {
         var verb = getVerb();
@@ -94,6 +135,8 @@ $(function() {
     }
 
     function onBotaEnviarClick() {      
+        var pontosGanhos = 0;
+
         if (resposta === 0) {
             resposta++;
 
@@ -111,15 +154,27 @@ $(function() {
         $("#msg-answer-participle").text(participle);
 
 
-        if (past.toLowerCase() === actualVerb.past)
+        if (past.toLowerCase() === actualVerb.past) 
+        {
             $("#msg-answer-pass").css("color", "blue");
+            pontosGanhos += 5;
+        }
         else 
             $("#msg-answer-pass").css("color", "red");
 
-        if (participle.toLowerCase() === actualVerb.participle)
+        if (participle.toLowerCase() === actualVerb.participle) 
+        {
             $("#msg-answer-participle").css("color", "blue");
+            pontosGanhos += 5;
+        }
         else 
             $("#msg-answer-participle").css("color", "red");
+
+        $("#pontos-ganhos").text("Pontos: +" + pontosGanhos);
+
+        pontos += pontosGanhos;
+
+        $("#pontos-total").text("Pontos: " + pontos);
 
     }
 
@@ -132,7 +187,8 @@ $(function() {
     }
 
     $(document).on("pageshow","#game", onPageGameShow);
-    $(document).on("pageshow","#item-verb", addVerbList);
+    $(document).on("pageshow", "#main", onBotaoGerarClick);
+    //$(document).on("pageshow","#item-verb", addVerbList);
     $("#botao-gerar").click(onBotaoGerarClick);
     $(".botao-enviar").click(onBotaEnviarClick);    
     $("#myFilter").keyup(onMyFilterKeyUp);
@@ -154,5 +210,5 @@ $(function() {
 
     onBotaoGerarClick();
 
-    addVerbList();
+     addVerbList();
 })
