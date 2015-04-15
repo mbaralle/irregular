@@ -11,26 +11,26 @@ document.addEventListener("deviceready", function(){
             window.admob.setUp(adUnit, adUnitFullScreen, isOverlap, isTest);
 
             //banner ad callback
-            window.admob.onBannerAdPreloaded = function() {
-                alert('onBannerAdPreloaded');
+            window.admob.onBannerAdPreloaded = function() {                
                 window.admob.showBannerAd('bottom-center', 'SMART_BANNER');
             };
-            window.admob.onBannerAdLoaded = function() {
-                alert('onBannerAdLoaded');
-            };
-            //full screen ad callback
-            window.admob.onFullScreenAdPreloaded = function() {
-                alert('onFullScreenAdPreloaded');
-            };
-            window.admob.onFullScreenAdLoaded = function() {
-                alert('onFullScreenAdLoaded');
-            };
-            window.admob.onFullScreenAdShown = function() {
-                alert('onFullScreenAdShown');
-            };
-            window.admob.onFullScreenAdHidden = function() {
-                alert('onFullScreenAdHidden');
-            };
+            
+            // window.admob.onBannerAdLoaded = function() {
+            //     alert('onBannerAdLoaded');
+            // };
+            // //full screen ad callback
+            // window.admob.onFullScreenAdPreloaded = function() {
+            //     alert('onFullScreenAdPreloaded');
+            // };
+            // window.admob.onFullScreenAdLoaded = function() {
+            //     alert('onFullScreenAdLoaded');
+            // };
+            // window.admob.onFullScreenAdShown = function() {
+            //     alert('onFullScreenAdShown');
+            // };
+            // window.admob.onFullScreenAdHidden = function() {
+            //     alert('onFullScreenAdHidden');
+            // };
             
             window.admob.preloadBannerAd();
            

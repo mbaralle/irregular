@@ -31,6 +31,8 @@
         <link rel="stylesheet" type="text/css" href="css/box.css" />
         <link rel="stylesheet" href="css/owl.carousel.css"> 
         <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        
         <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/verbs.js"></script>
@@ -38,6 +40,7 @@
         <script type="text/javascript" src="js/iscroll-lite.js"></script>
         <script src='cordova.js'></script>
         <script type="text/javascript" src="fastclick.js"></script>
+
 
   <!-- Include the jQuery Mobile library -->
          <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -51,10 +54,10 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List</a>
+                        <a href="#list">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random</a>
+                        <a href="#main">Random verb</a>
                     </li>                   
                     <li>
                         <a href="#game">Game</a>
@@ -62,9 +65,11 @@
                 </ul>
             </div>
 
-            <div data-role="header" data-theme="b">                            
-                <a href="#menu01" data-role="button" data-icon="flat-menu" style="width: 20px; height: 20px;"></a>                            
-                <h1>Irregular verbs</h1>
+            <div data-role="header" data-theme="b">  
+                <p></p>                          
+                <a href="#menu01" data-role="button" ><i class="fa fa-bars fa-2x"></i></a>
+                <strong style="margin-left:80px;">Easy irregular verbs</strong>
+                <p></p>
             </div>
 
             <div data-role="main" class="ui-content">                 
@@ -93,10 +98,10 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List</a>
+                        <a href="#list">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random</a>
+                        <a href="#main">Random verb</a>
                     </li>                   
                     <li>
                         <a href="#game">Game</a>
@@ -104,10 +109,13 @@
                 </ul>
             </div>
 
-            <div data-role="header" data-theme="b">                            
-                <a href="#menu" data-role="button" data-icon="flat-menu" style="width: 20px; height: 20px;"></a>                            
-                <h1>Irregular verbs</h1>
+            <div data-role="header" data-theme="b">  
+                <p></p>                          
+                <a href="#menu" data-role="button" ><i class="fa fa-bars fa-2x"></i></a>
+                <strong style="margin-left:80px;">Easy irregular verbs</strong>
+                <p></p>
             </div>
+            
             <div data-role="main" class="ui-content">
                 <div id="owl-demo" class="owl-carousel owl-theme">
                     <div class="item ui-box" align="center" id="div-verb">
@@ -139,10 +147,10 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List</a>
+                        <a href="#list">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random</a>
+                        <a href="#main">Random verb</a>
                     </li>                   
                     <li>
                         <a href="#game">Game</a>
@@ -150,10 +158,13 @@
                 </ul>
             </div>
 
-            <div data-role="header" data-theme="b">                            
-                <a href="#menu03" data-role="button" data-icon="flat-menu" style="width: 20px; height: 20px;"></a>                            
-                <h1>Irregular verbs</h1>
+            <div data-role="header" data-theme="b">  
+                <p></p>                          
+                <a href="#menu03" data-role="button" ><i class="fa fa-bars fa-2x"></i></a>
+                <strong style="margin-left:80px;">Easy irregular verbs</strong>
+                <p></p>
             </div>
+            
             <div data-role="main" class="ui-content">
                 <div id="owl-actual-verbs" class="owl-carousel owl-theme">
                     <div class="item ui-box" align="center" id="actual-div-verb">
@@ -184,10 +195,10 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List</a>
+                        <a href="#list">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random</a>
+                        <a href="#main">Random verb</a>
                     </li>                   
                     <li>
                         <a href="#game">Game</a>
@@ -195,9 +206,11 @@
                 </ul>
             </div>
 
-            <div data-role="header" data-theme="b">                            
-                <a href="#menu02" data-role="button" data-icon="flat-menu" style="width: 20px; height: 20px;"></a>                            
-                <h1>Irregular verbs</h1>
+            <div data-role="header" data-theme="b">  
+                <p></p>                          
+                <a href="#menu02" data-role="button" ><i class="fa fa-bars fa-2x"></i></a>
+                <strong style="margin-left:80px;">Easy irregular verbs</strong>
+                <p></p>
             </div>
 
             <div data-role="main" class="ui-content align-center">    
@@ -207,43 +220,38 @@
                     <h2 align="center" id="game-irregular-verb" style="color: white"></h2>
                 </div>   
 
-                <div class="ui-box-1" id="div-game-past" align="center">                    
-                    <p>Past</p>
-                    <input type="text" id="answer-past" placeholder="Answer"  autocapitalize="off" autocorrect="off">
+                <div class="ui-box-3" id="div-game-past" align="center">                                        
+                    <label for="answer-past">Past</label>
+                    <input type="text" id="answer-past" name="answer-past" placeholder="Answer"  autocapitalize="off" autocorrect="off">
                     <button data-inline="true" class="botao-enviar">Send</button>   
                 </div>
 
-                <div class="ui-box-2" id="div-game-participle" align="center" style="display:none">                    
-                
-                    <h3 align="center">Participle</h3>
-                    <input type="text" id="answer-participle" placeholder="Answer" autocapitalize="off" autocorrect="off">
+                <div class="ui-box-3" id="div-game-participle" align="center" style="display:none">                    
+                    <label for="answer-participle">Participle</label>
+                    <input type="text" id="answer-participle" name="answer-participle" placeholder="Answer" autocapitalize="off" autocorrect="off">
                     <!-- <button data-inline="true" id="botao-next">Next</button>  -->
 
-                    <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline botao-enviar">Send</a>
+                    <a href="#answer" data-transition="flip" class="ui-btn ui-corner-all ui-shadow ui-btn-inline botao-enviar">Send</a>
 
 
-                    <!-- ***************************************  Pop up ********************************************** -->
                   
-                    <div data-role="popup" id="myPopupDialog" data-dismissible="false" align="center" style="width: 300px">
-                      <div data-role="header">
-                        <h1>Answer</h1>
-                      </div>
-
-                      <div data-role="main" class="ui-content">
-                        <h1 id="pontos-ganhos">Pontos: </h1>
-                        <h1 id="msg-verb">Verb: Flight</h1>
-                        <p>Past:
-                        <strong id="msg-past">teste</strong><strong> </strong><strong id="msg-answer-pass"> teste</strong></p>
-                        <p>Participle:
-                        <strong id="msg-participle">teste</strong><strong> </strong><strong id="msg-answer-participle" style="color: red"> teste</strong></p>    
-
-                        <a href="#" data-rel="back" class="ui-btn" id="botao-next" >Next verb</a>                    
-                      </div>
-
-                    </div>
-
-                    <!-- ***************************************  Fim Pop up ********************************************** -->
                 </div>
+            </div>
+
+        </div>
+
+<!-- **********************************************Respostas****************************************************** -->
+
+        <div data-role="page" id="answer">
+            <div data-role="main" class="ui-content ui-box-2" align="center"> 
+                <h1 id="pontos-ganhos" style="color:white">Pontos: </h1>
+                <h1 id="msg-verb" style="color:white">Verb: Flight</h1>
+                <p>Past:
+                <strong id="msg-past">teste</strong><strong> </strong><strong id="msg-answer-pass"> teste</strong></p>
+                <p>Participle:
+                <strong id="msg-participle">teste</strong><strong> </strong><strong id="msg-answer-participle" style="color: red"> teste</strong></p>    
+
+                <a href="#" data-rel="back" class="ui-btn" id="botao-next" >Next verb</a>                    
             </div>
 
         </div>

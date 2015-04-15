@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "0758990e-69d4-4b7b-a2cf-c07fd6baa308",
-      "lastModifiedDate": 1429103904829,
+      "lastModifiedDate": 1429123301977,
       "creationDate": 1428951135344
     },
     "sourceDirectory": "www",
@@ -175,8 +175,77 @@
             "origin": "*"
           }
         ],
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "img/180x180.png",
+            "height": 180,
+            "width": 180
+          },
+          {
+            "relPath": "img/120x120.png",
+            "height": 120,
+            "width": 120
+          },
+          {
+            "relPath": "img/60x60.png",
+            "height": 60,
+            "width": 60
+          },
+          {
+            "relPath": "img/152x152.png",
+            "height": 152,
+            "width": 152
+          },
+          {
+            "relPath": "img/76x76.png",
+            "height": 76,
+            "width": 76
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "img/750x1334.png",
+            "height": 1334,
+            "width": 750,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/1242x208.png",
+            "height": 2208,
+            "width": 1242,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/640x1136.png",
+            "height": 1136,
+            "width": 640,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/640x960.png",
+            "height": 960,
+            "width": 640,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/320x480.png",
+            "height": 480,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/1536x2008.png",
+            "height": 2008,
+            "width": 1536,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/768x1004.png",
+            "height": 1004,
+            "width": 768,
+            "orientation": "portrait"
+          }
+        ],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "appVersion_": "0.0.1",

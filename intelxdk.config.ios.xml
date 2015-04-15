@@ -7,6 +7,18 @@
 <name>Irregular</name>
 <content src="index.html"/>
 <access origin="*"/>
+<icon platform="ios" src="img/180x180.png" width="180" height="180"/>
+<icon platform="ios" src="img/120x120.png" width="120" height="120"/>
+<icon platform="ios" src="img/60x60.png" width="60" height="60"/>
+<icon platform="ios" src="img/152x152.png" width="152" height="152"/>
+<icon platform="ios" src="img/76x76.png" width="76" height="76"/>
+<splash platform="ios" src="img/750x1334.png" width="750" height="1334" orientation="portrait"/>
+<splash platform="ios" src="img/1242x208.png" width="1242" height="2208" orientation="portrait"/>
+<splash platform="ios" src="img/640x1136.png" width="640" height="1136" orientation="portrait"/>
+<splash platform="ios" src="img/640x960.png" width="640" height="960" orientation="portrait"/>
+<splash platform="ios" src="img/320x480.png" width="320" height="480" orientation="portrait"/>
+<splash platform="ios" src="img/1536x2008.png" width="1536" height="2008" orientation="portrait"/>
+<splash platform="ios" src="img/768x1004.png" width="768" height="1004" orientation="portrait"/>
 <intelxdk:plugin intelxdk:name="Device" intelxdk:value="org.apache.cordova.device" intelxdk:version="0.2.13"/>
 <intelxdk:plugin intelxdk:name="Admob* plugin" intelxdk:value="com.cranberrygame.phonegap.plugin.ad.admob"/>
 <intelxdk:plugin intelxdk:name="Connection" intelxdk:value="org.apache.cordova.network-information" intelxdk:version="0.2.14"/>
