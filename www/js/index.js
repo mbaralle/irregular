@@ -110,10 +110,31 @@ $(function() {
     var resposta = 0;
     var past = "";
     var participle = "";
-    var pontos = 0;
+    var pontos = 0;    
+    var verbsGameGlobal = [];
+    var chanceGlobal = 1;
+    var chanceTotalGlobal = 5;
+
+    function updateStatusBar() {
+        $("#total-verbs").text("Verbs: " + verbsGameGlobal.length + "/" + verbsGlobal.length);
+        $("#chances").text("Chances: " + chanceGlobal + "/" + chanceTotalGlobal);
+        $("#pontos-total").text("Points: " + pontos);
+    }
+
+    function getGameVerb() {
+        var verb = getVerb();
+
+        while (verbsGameGlobal.indexOf(verb.normal) >= 0) {
+            verb = getVerb;
+        }
+
+        verbsGameGlobal.push(verb.normal);
+
+        return verb;
+    }
 
     function onPageGameShow() {
-        var verb = getVerb();
+        var verb = getGameVerb();
 
         resposta = 0;
 
@@ -123,19 +144,43 @@ $(function() {
         $("#answer-past").val("");
         $("#answer-participle").val("");
         $("#div-game-past").show();
-
-        $("#message-game").text("");
-
-        $("#label-option1").text(verb.past);
-        $("#label-option2").text(verb.participle);
+        
 
         $("#msg-verb").text("Verb: " + verb.normal);
         $("#msg-past").text(verb.past);
         $("#msg-participle").text(verb.participle);
+
+        updateStatusBar();
     }
 
-    function onBotaEnviarClick() {      
-        var pontosGanhos = 0;
+  
+    function onBotaEnviarClick() {           
+        var verb;
+        var answer;
+
+        $("#answer-past").bind();
+        $("#game-div-verb").focus();
+
+
+        if (resposta === 0) {
+            verb = actualVerb.past;
+            answer = $("#answer-past").val();
+        }
+        else {
+            verb = actualVerb.participle;
+            answer = $("#answer-participle").val();
+        }
+        
+        if (verb === answer) 
+            $("#popupRight").popup("open", {positionTo: "window", transition:"flip"});        
+        else {
+            $("#popupWrong").popup("open", {positionTo: "window", transition:"flip"});        
+            chanceGlobal++; 
+        }
+    }
+
+    function onMyPopupDialogClose() {
+          var pontosGanhos = 0;       
 
         if (resposta === 0) {
             resposta++;
@@ -144,42 +189,45 @@ $(function() {
             $("#div-game-participle").show();
 
             past = $("#answer-past").val();
+
+            if (past.toLowerCase() === actualVerb.past) 
+            {
+                $("#msg-answer-pass").css("color", "blue");
+                pontosGanhos += 5;
+            }
+            else 
+                $("#msg-answer-pass").css("color", "red");
         }
         else {
             resposta = 0;
             participle = $("#answer-participle").val();
+            $.mobile.changePage("#answer", {transition: "flip"});
+
+            if (participle.toLowerCase() === actualVerb.participle) 
+            {
+                $("#msg-answer-participle").css("color", "blue");
+                pontosGanhos += 5;
+            }
+            else 
+                $("#msg-answer-participle").css("color", "red");
+
+            
         }
 
         $("#msg-answer-pass").text(past);
         $("#msg-answer-participle").text(participle);
 
-
-        if (past.toLowerCase() === actualVerb.past) 
-        {
-            $("#msg-answer-pass").css("color", "blue");
-            pontosGanhos += 5;
-        }
-        else 
-            $("#msg-answer-pass").css("color", "red");
-
-        if (participle.toLowerCase() === actualVerb.participle) 
-        {
-            $("#msg-answer-participle").css("color", "blue");
-            pontosGanhos += 5;
-        }
-        else 
-            $("#msg-answer-participle").css("color", "red");
-
-        $("#pontos-ganhos").text("Pontos: +" + pontosGanhos);
-
         pontos += pontosGanhos;
 
-        $("#pontos-total").text("Pontos: " + pontos);
-
+        updateStatusBar();
     }
 
-    function onMyPopupDialogClose() {
-        onPageGameShow();
+    function onMenuItemClick() {
+        pontos = 0;
+        verbsGameGlobal = [];   
+        chanceGlobal = 1;      
+
+        updateStatusBar();
     }
 
     function onMyFilterKeyUp() {
@@ -187,13 +235,13 @@ $(function() {
     }
 
     $(document).on("pageshow","#game", onPageGameShow);
-    $(document).on("pageshow", "#main", onBotaoGerarClick);
-    //$(document).on("pageshow","#item-verb", addVerbList);
+    $(document).on("pageshow", "#main", onBotaoGerarClick);    
     $("#botao-gerar").click(onBotaoGerarClick);
     $(".botao-enviar").click(onBotaEnviarClick);    
     $("#myFilter").keyup(onMyFilterKeyUp);
+    $(".menu-item").click(onMenuItemClick)
 
-    $("#myPopupDialog").bind({popupafterclose : onMyPopupDialogClose });
+    $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
     
 
     $("#owl-demo").owlCarousel({

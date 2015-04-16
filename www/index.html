@@ -54,13 +54,13 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List all verbs</a>
+                        <a href="#list" class="menu-item">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random verb</a>
+                        <a href="#main" class="menu-item">Random verb</a>
                     </li>                   
                     <li>
-                        <a href="#game">Game</a>
+                        <a href="#game" class="menu-item">Game</a>
                     </li>
                 </ul>
             </div>
@@ -98,13 +98,13 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List all verbs</a>
+                        <a href="#list" class="menu-item">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random verb</a>
+                        <a href="#main" class="menu-item">Random verb</a>
                     </li>                   
                     <li>
-                        <a href="#game">Game</a>
+                        <a href="#game" class="menu-item">Game</a>
                     </li>
                 </ul>
             </div>
@@ -147,13 +147,13 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List all verbs</a>
+                        <a href="#list" class="menu-item">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random verb</a>
+                        <a href="#main" class="menu-item">Random verb</a>
                     </li>                   
                     <li>
-                        <a href="#game">Game</a>
+                        <a href="#game" class="menu-item">Game</a>
                     </li>
                 </ul>
             </div>
@@ -195,13 +195,13 @@
                 <ul data-role="listview" data-theme="b" >
                     <li data-role="list-divider">Menu</li>
                     <li>
-                        <a href="#list">List all verbs</a>
+                        <a href="#list" class="menu-item">List all verbs</a>
                     </li>
                     <li>
-                        <a href="#main">Random verb</a>
+                        <a href="#main" class="menu-item">Random verb</a>
                     </li>                   
                     <li>
-                        <a href="#game">Game</a>
+                        <a href="#game" class="menu-item">Game</a>
                     </li>
                 </ul>
             </div>
@@ -211,11 +211,19 @@
                 <a href="#menu02" data-role="button" ><i class="fa fa-bars fa-2x"></i></a>
                 <strong style="margin-left:80px;">Easy irregular verbs</strong>
                 <p></p>
-            </div>
 
-            <div data-role="main" class="ui-content align-center">    
-                <strong id="pontos-total" data-role="none" style="margin: 25px">Pontos: 00</strong>            
-                <div class="item ui-box" align="center" id="game-div-verb">
+                 <div data-role="navbar" >
+                    <ul>
+                        <li><a href="#" data-theme="f" id="total-verbs"></a></li>
+                        <li><a href="#" data-theme="f" id="chances"></a></li>
+                        <li><a href="#" data-theme="f" id="pontos-total"></a></li>
+                    </ul>
+                </div>
+            </div>            
+
+            <div data-role="main" class="ui-content align-center">                   
+
+                <div class="item ui-box" align="center" id="game-div-verb" style="margin-top:00px">
                     <p>Verb</p>
                     <h2 align="center" id="game-irregular-verb" style="color: white"></h2>
                 </div>   
@@ -224,17 +232,25 @@
                     <label for="answer-past">Past</label>
                     <input type="text" id="answer-past" name="answer-past" placeholder="Answer"  autocapitalize="off" autocorrect="off">
                     <button data-inline="true" class="botao-enviar">Send</button>   
+                    <!-- <a href="#popupWrong" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all botao-enviar" data-position-to="window" data-transition="flip">Send</a> -->
+                </div>
+
+                <div data-role="popup" id="popupRight" align="center" class="ui-box popup-points" data-overlay-theme="a" >
+                    <h1 style="color:blue">Right</h1>
+                    <h2>+5 points</h2>
+                </div>
+
+                <div data-role="popup" id="popupWrong" align="center" class="ui-box-3 popup-points" style="background-color:white" data-overlay-theme="c" data-theme="c" data-dismissible="true" > 
+                    <h1 style="color:red">Wrong</h1>
+                    <h2>+0 points</h2>
                 </div>
 
                 <div class="ui-box-3" id="div-game-participle" align="center" style="display:none">                    
                     <label for="answer-participle">Participle</label>
                     <input type="text" id="answer-participle" name="answer-participle" placeholder="Answer" autocapitalize="off" autocorrect="off">
-                    <!-- <button data-inline="true" id="botao-next">Next</button>  -->
+                    <button data-inline="true" class="botao-enviar">Send</button>   
 
-                    <a href="#answer" data-transition="flip" class="ui-btn ui-corner-all ui-shadow ui-btn-inline botao-enviar">Send</a>
-
-
-                  
+                    <!-- <a href="#answer" data-transition="flip" class="ui-btn ui-corner-all ui-shadow ui-btn-inline botao-enviar">Send</a> -->
                 </div>
             </div>
 
@@ -243,8 +259,7 @@
 <!-- **********************************************Respostas****************************************************** -->
 
         <div data-role="page" id="answer">
-            <div data-role="main" class="ui-content ui-box-2" align="center"> 
-                <h1 id="pontos-ganhos" style="color:white">Pontos: </h1>
+            <div data-role="main" class="ui-content ui-box-2" align="center">                 
                 <h1 id="msg-verb" style="color:white">Verb: Flight</h1>
                 <p>Past:
                 <strong id="msg-past">teste</strong><strong> </strong><strong id="msg-answer-pass"> teste</strong></p>
