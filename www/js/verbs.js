@@ -2,13 +2,13 @@ geraVerbs([
 	{
 		"normal":"awake",
 		"past":"awoke",
-		"participle":"awoken"	
+		"participle":"awoken"
 	},
 	{
 		"normal":"be",
 		"past":"was, were",
 		"participle":"been"
-	}, 
+	},
 	{
 		"normal":"beat",
 		"past":"beat",
@@ -46,7 +46,7 @@ geraVerbs([
 		"participle":"bitten"
 	},
 	{
-		"normal":"blown",
+		"normal":"blow",
 		"past":"blew",
 		"participle":"blown"
 	},

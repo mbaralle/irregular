@@ -1,10 +1,11 @@
 var verbsGlobal;
 var actualVerb;
 
-var adUnit = "ca-app-pub-5978610397346153/5966821227";
-var adUnitFullScreen = "ca-app-pub-5978610397346153/7443554423";
+var adUnit = "ca-app-pub-5978610397346153/5358045629";
+var adUnitFullScreen = "ca-app-pub-5978610397346153/8054160024";
 var isOverlap = true; //true: overlap, false: split
 var isTest = true;
+var adPreLoaded = false;
 
 document.addEventListener("deviceready", function(){
 
@@ -19,20 +20,22 @@ document.addEventListener("deviceready", function(){
             //     alert('onBannerAdLoaded');
             // };
             // //full screen ad callback
-            // window.admob.onFullScreenAdPreloaded = function() {
-            //     alert('onFullScreenAdPreloaded');
-            // };
-            // window.admob.onFullScreenAdLoaded = function() {
-            //     alert('onFullScreenAdLoaded');
-            // };
-            // window.admob.onFullScreenAdShown = function() {
-            //     alert('onFullScreenAdShown');
-            // };
-            // window.admob.onFullScreenAdHidden = function() {
-            //     alert('onFullScreenAdHidden');
-            // };
+            window.admob.onFullScreenAdPreloaded = function() {
+                 adPreLoaded = true;
+            };
+            //  window.admob.onFullScreenAdLoaded = function() {
+            //
+            //  };
+            //  window.admob.onFullScreenAdShown = function() {
+            //      alert('onFullScreenAdShown');
+            //  };
+              window.admob.onFullScreenAdHidden = function() {
+                  adPreLoaded = false;
+                  window.admob.preloadFullScreenAd();
+              };
 
             window.admob.preloadBannerAd();
+            window.admob.preloadFullScreenAd();
 
 }, false);
 
@@ -153,6 +156,11 @@ $(function() {
         updateStatusBar();
     }
 
+    function finalizeGame() {
+      $("#msg-points").text(pontos);
+      $("#msg-verbs-seen").text(verbsGameGlobal.length + "/" + verbsGlobal.length);
+      $.mobile.changePage("#lose-page", {transition: "flip"});
+    }
 
     function onBotaEnviarClick() {
         var verb;
@@ -174,13 +182,18 @@ $(function() {
         if (verb === answer)
             $("#popupRight").popup("open", {positionTo: "window", transition:"flip"});
         else {
+          $("#answer-chance").text("Chance: " + chanceGlobal + "/" + chanceTotalGlobal);
             $("#popupWrong").popup("open", {positionTo: "window", transition:"flip"});
             chanceGlobal++;
+        }
+
+        if (chanceGlobal > chanceTotalGlobal) {
+          finalizeGame();
         }
     }
 
     function onMyPopupDialogClose() {
-          var pontosGanhos = 0;
+        var pontosGanhos = 0;
 
         if (resposta === 0) {
             resposta++;
@@ -222,16 +235,29 @@ $(function() {
         updateStatusBar();
     }
 
-    function onMenuItemClick() {
-        pontos = 0;
-        verbsGameGlobal = [];
-        chanceGlobal = 1;
+    function iniciarGame() {
+      pontos = 0;
+      verbsGameGlobal = [];
+      chanceGlobal = 1;
+    }
 
-        updateStatusBar();
+    function onMenuItemClick() {
+      iniciarGame();
+
+      updateStatusBar();
     }
 
     function onMyFilterKeyUp() {
         myScroll.scrollTo(0, 0);
+    }
+
+    function onBotaoReloadClick() {
+      if (adPreLoaded) {
+        window.admob.showFullScreenAd();
+      }
+
+      iniciarGame();
+      $.mobile.changePage("#game", {transition: "flip"});
     }
 
     $(document).on("pageshow","#game", onPageGameShow);
@@ -240,6 +266,7 @@ $(function() {
     $(".botao-enviar").click(onBotaEnviarClick);
     $("#myFilter").keyup(onMyFilterKeyUp);
     $(".menu-item").click(onMenuItemClick)
+    $("#botao-reload").click(onBotaoReloadClick);
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
 

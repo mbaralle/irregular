@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "0758990e-69d4-4b7b-a2cf-c07fd6baa308",
-      "lastModifiedDate": 1429123301977,
+      "lastModifiedDate": 1429293448030,
       "creationDate": 1428951135344
     },
     "sourceDirectory": "www",
@@ -140,9 +140,9 @@
           "android-targetSdkVersion": "19",
           "android-installLocation": "auto"
         },
-        "isActive_": false,
+        "isActive_": true,
         "appName_": "Irregular",
-        "appID_": "not.yet.specified",
+        "appID_": "br.com.irregular",
         "appAccess_": [
           {
             "origin": "*"
