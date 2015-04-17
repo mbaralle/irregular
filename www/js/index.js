@@ -7,14 +7,14 @@ var isOverlap = true; //true: overlap, false: split
 var isTest = true;
 
 document.addEventListener("deviceready", function(){
-          
+
             window.admob.setUp(adUnit, adUnitFullScreen, isOverlap, isTest);
 
             //banner ad callback
-            window.admob.onBannerAdPreloaded = function() {                
+            window.admob.onBannerAdPreloaded = function() {
                 window.admob.showBannerAd('bottom-center', 'SMART_BANNER');
             };
-            
+
             // window.admob.onBannerAdLoaded = function() {
             //     alert('onBannerAdLoaded');
             // };
@@ -31,15 +31,15 @@ document.addEventListener("deviceready", function(){
             // window.admob.onFullScreenAdHidden = function() {
             //     alert('onFullScreenAdHidden');
             // };
-            
+
             window.admob.preloadBannerAd();
-           
+
 }, false);
 
 var myScroll;
 
 function loaded () {
-    myScroll = new IScroll('#wrapper', { mouseWheel: true, disableTouch: false, click: true});  
+    myScroll = new IScroll('#wrapper', { mouseWheel: true, disableTouch: false, click: true});
 
     console.log("loaded");
 }
@@ -54,7 +54,7 @@ function geraVerbs(verbs) {
 
 function getVerb() {
      var count = verbsGlobal.length;
-    
+
     if (count > 0) {
         var i = randomIntFromInterval(1, count);
 
@@ -71,11 +71,11 @@ $(function() {
 
         $("#irregular-verb").text(verb.normal);
         $("#past-verb").text(verb.past);
-        $("#past-participle").text(verb.participle);    
+        $("#past-participle").text(verb.participle);
 
 
         var owl = $("#owl-demo").data('owlCarousel');
-        owl.goTo(0)   
+        owl.goTo(0)
     }
 
     function addVerbList() {
@@ -83,11 +83,11 @@ $(function() {
         $("#list-irregular-verbs").empty();
 
         for (var i = 0; i < verbsGlobal.length; i++) {
-            $("#list-irregular-verbs").append("<li class='item-list' value='"  + i + "''><a href='#item-verb'>" + verbsGlobal[i].normal + "</a></li>");            
+            $("#list-irregular-verbs").append("<li class='item-list' value='"  + i + "''><a href='#item-verb'>" + verbsGlobal[i].normal + "</a></li>");
         };
 
-        
-        $(".item-list").unbind("click");   
+
+        $(".item-list").unbind("click");
 
         $(".item-list").click(function() {
             console.log($( this ).val());
@@ -98,19 +98,19 @@ $(function() {
 
             $("#actual-irregular-verb").text(actualVerb.normal);
             $("#actual-past-verb").text(actualVerb.past);
-            $("#actual-past-participle").text(actualVerb.participle);    
+            $("#actual-past-participle").text(actualVerb.participle);
 
             var owl = $("#owl-actual-verbs").data('owlCarousel');
-            owl.goTo(0)   
+            owl.goTo(0)
 
-           //  myScroll = new IScroll('#wrapper', { mouseWheel: true, disableTouch: false, click: true});  
+           //  myScroll = new IScroll('#wrapper', { mouseWheel: true, disableTouch: false, click: true});
         })
     }
 
     var resposta = 0;
     var past = "";
     var participle = "";
-    var pontos = 0;    
+    var pontos = 0;
     var verbsGameGlobal = [];
     var chanceGlobal = 1;
     var chanceTotalGlobal = 5;
@@ -125,7 +125,7 @@ $(function() {
         var verb = getVerb();
 
         while (verbsGameGlobal.indexOf(verb.normal) >= 0) {
-            verb = getVerb;
+            verb = getVerb();
         }
 
         verbsGameGlobal.push(verb.normal);
@@ -144,7 +144,7 @@ $(function() {
         $("#answer-past").val("");
         $("#answer-participle").val("");
         $("#div-game-past").show();
-        
+
 
         $("#msg-verb").text("Verb: " + verb.normal);
         $("#msg-past").text(verb.past);
@@ -153,8 +153,8 @@ $(function() {
         updateStatusBar();
     }
 
-  
-    function onBotaEnviarClick() {           
+
+    function onBotaEnviarClick() {
         var verb;
         var answer;
 
@@ -170,17 +170,17 @@ $(function() {
             verb = actualVerb.participle;
             answer = $("#answer-participle").val();
         }
-        
-        if (verb === answer) 
-            $("#popupRight").popup("open", {positionTo: "window", transition:"flip"});        
+
+        if (verb === answer)
+            $("#popupRight").popup("open", {positionTo: "window", transition:"flip"});
         else {
-            $("#popupWrong").popup("open", {positionTo: "window", transition:"flip"});        
-            chanceGlobal++; 
+            $("#popupWrong").popup("open", {positionTo: "window", transition:"flip"});
+            chanceGlobal++;
         }
     }
 
     function onMyPopupDialogClose() {
-          var pontosGanhos = 0;       
+          var pontosGanhos = 0;
 
         if (resposta === 0) {
             resposta++;
@@ -190,12 +190,12 @@ $(function() {
 
             past = $("#answer-past").val();
 
-            if (past.toLowerCase() === actualVerb.past) 
+            if (past.toLowerCase() === actualVerb.past)
             {
                 $("#msg-answer-pass").css("color", "blue");
                 pontosGanhos += 5;
             }
-            else 
+            else
                 $("#msg-answer-pass").css("color", "red");
         }
         else {
@@ -203,15 +203,15 @@ $(function() {
             participle = $("#answer-participle").val();
             $.mobile.changePage("#answer", {transition: "flip"});
 
-            if (participle.toLowerCase() === actualVerb.participle) 
+            if (participle.toLowerCase() === actualVerb.participle)
             {
                 $("#msg-answer-participle").css("color", "blue");
                 pontosGanhos += 5;
             }
-            else 
+            else
                 $("#msg-answer-participle").css("color", "red");
 
-            
+
         }
 
         $("#msg-answer-pass").text(past);
@@ -224,8 +224,8 @@ $(function() {
 
     function onMenuItemClick() {
         pontos = 0;
-        verbsGameGlobal = [];   
-        chanceGlobal = 1;      
+        verbsGameGlobal = [];
+        chanceGlobal = 1;
 
         updateStatusBar();
     }
@@ -235,26 +235,26 @@ $(function() {
     }
 
     $(document).on("pageshow","#game", onPageGameShow);
-    $(document).on("pageshow", "#main", onBotaoGerarClick);    
+    $(document).on("pageshow", "#main", onBotaoGerarClick);
     $("#botao-gerar").click(onBotaoGerarClick);
-    $(".botao-enviar").click(onBotaEnviarClick);    
+    $(".botao-enviar").click(onBotaEnviarClick);
     $("#myFilter").keyup(onMyFilterKeyUp);
     $(".menu-item").click(onMenuItemClick)
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
-    
+
 
     $("#owl-demo").owlCarousel({
       slideSpeed : 300,
       paginationSpeed : 400,
-      singleItem:true 
+      singleItem:true
     });
 
     $("#owl-actual-verbs").owlCarousel({
       slideSpeed : 300,
       paginationSpeed : 400,
-      singleItem:true 
-    });    
+      singleItem:true
+    });
 
     onBotaoGerarClick();
 
