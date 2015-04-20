@@ -1,19 +1,19 @@
 .ui-box {
     background-color: #e87352;
     width: 300px;
-    padding: 10px;    
+    padding: 10px;
     margin: 25px;
-    max-width: 80%; 
+    max-width: 80%;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
 .ui-box-1 {
     background-color: #ebc85e;
     width: 300px;
-    padding: 10px;    
+    padding: 10px;
     margin: 25px;
-    max-width: 80%; 
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -21,9 +21,9 @@
 .ui-box-2 {
     background-color: #3bbec0;
     width: 300px;
-    padding: 10px;    
+    padding: 10px;
     margin: 25px;
-    max-width: 80%; 
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,9 +36,9 @@
     height: 125px;
     padding: 10px;
     margin: 10px;
-    max-width: 80%; 
+    max-width: 80%;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
 #wrapper {
@@ -80,4 +80,9 @@
     margin: 0;
     width: 100%;
     text-align: left;
+}
+
+ui-li-icon {
+max-height: 300px;
+max-width: 300px;
 }

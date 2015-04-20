@@ -115,12 +115,12 @@ $(function() {
     var participle = "";
     var pontos = 0;
     var verbsGameGlobal = [];
-    var chanceGlobal = 1;
+    var chanceGlobal = 5;
     var chanceTotalGlobal = 5;
 
     function updateStatusBar() {
         $("#total-verbs").text("Verbs: " + verbsGameGlobal.length + "/" + verbsGlobal.length);
-        $("#chances").text("Chances: " + chanceGlobal + "/" + chanceTotalGlobal);
+        $("#chances").text("Lifes: " + chanceGlobal + "/" + chanceTotalGlobal);
         $("#pontos-total").text("Points: " + pontos);
     }
 
@@ -182,12 +182,12 @@ $(function() {
         if (verb === answer)
             $("#popupRight").popup("open", {positionTo: "window", transition:"flip"});
         else {
-          $("#answer-chance").text("Chance: " + chanceGlobal + "/" + chanceTotalGlobal);
-            $("#popupWrong").popup("open", {positionTo: "window", transition:"flip"});
-            chanceGlobal++;
+          chanceGlobal--;
+          $("#answer-chance").text("Lifes: " + chanceGlobal + "/" + chanceTotalGlobal);
+          $("#popupWrong").popup("open", {positionTo: "window", transition:"flip"});
         }
 
-        if (chanceGlobal > chanceTotalGlobal) {
+        if (chanceGlobal === 0) {
           finalizeGame();
         }
     }
@@ -206,10 +206,13 @@ $(function() {
             if (past.toLowerCase() === actualVerb.past)
             {
                 $("#msg-answer-pass").css("color", "blue");
+                $("#img-past").attr("src", "img/verification.png");
                 pontosGanhos += 5;
             }
-            else
+            else {
                 $("#msg-answer-pass").css("color", "red");
+                $("#img-past").attr("src", "img/cross.png");
+            }
         }
         else {
             resposta = 0;
@@ -219,10 +222,13 @@ $(function() {
             if (participle.toLowerCase() === actualVerb.participle)
             {
                 $("#msg-answer-participle").css("color", "blue");
+                $("#img-participle").attr("src", "img/verification.png");
                 pontosGanhos += 5;
             }
-            else
+            else {
                 $("#msg-answer-participle").css("color", "red");
+                $("#img-participle").attr("src", "img/cross.png");
+            }
 
 
         }
@@ -238,7 +244,7 @@ $(function() {
     function iniciarGame() {
       pontos = 0;
       verbsGameGlobal = [];
-      chanceGlobal = 1;
+      chanceGlobal = 5;
     }
 
     function onMenuItemClick() {
