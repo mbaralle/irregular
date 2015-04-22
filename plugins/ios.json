@@ -8,7 +8,8 @@
     },
     "installed_plugins": {
         "org.apache.cordova.device": {},
-        "org.apache.cordova.network-information": {}
+        "org.apache.cordova.network-information": {},
+        "org.apache.cordova.inappbrowser": {}
     },
     "dependent_plugins": {
         "org.apache.cordova.file": {}

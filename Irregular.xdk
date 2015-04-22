@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "0758990e-69d4-4b7b-a2cf-c07fd6baa308",
-      "lastModifiedDate": 1429539417868,
+      "lastModifiedDate": 1429734638102,
       "creationDate": 1428951135344
     },
     "sourceDirectory": "www",
@@ -46,12 +46,11 @@
         "dependedBy": []
       },
       {
-        "id": "org.apache.cordova.file",
-        "version": "1.3.2",
-        "selectedState": "Excluded",
+        "id": "org.apache.cordova.inappbrowser",
+        "version": "0.5.4",
+        "selectedState": "Included",
         "data": {},
         "paramvals": {},
-        "checksum": "ae85da67aca33474ca304ca1b41f756bff87bd687882dbd65a081a1128c62f85",
         "dependsOn": [],
         "dependedBy": []
       }
@@ -165,7 +164,7 @@
           "ios-target": "6",
           "ios-configuration": "adhoc",
           "exit-on-suspend": false,
-          "Fullscreen": false
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "Irregular",
@@ -252,11 +251,12 @@
         "cordovaCLIVersion_": "4.1.2",
         "iosProvs_": [
           {
-            "relPath": "profileirregular.mobileprovision",
+            "relPath": "profileirregular2.mobileprovision",
             "type": "adhoc"
           }
         ],
-        "appDescription_": ""
+        "appDescription_": "Easy Irregular Verb",
+        "appVersionCode_": ""
       },
       "Windows8": {
         "platform_": "windows8",

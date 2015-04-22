@@ -5,6 +5,7 @@
 <intelxdk:version value="1.0"/>
 <intelxdk:cordova-cli version="4.1.2"/>
 <name>Irregular</name>
+<description>Easy Irregular Verb</description>
 <content src="index.html"/>
 <access origin="*"/>
 <icon platform="ios" src="img/180.png" width="180" height="180"/>
@@ -22,9 +23,10 @@
 <intelxdk:plugin intelxdk:name="Device" intelxdk:value="org.apache.cordova.device" intelxdk:version="0.2.13"/>
 <intelxdk:plugin intelxdk:name="Admob* plugin" intelxdk:value="com.cranberrygame.phonegap.plugin.ad.admob"/>
 <intelxdk:plugin intelxdk:name="Connection" intelxdk:value="org.apache.cordova.network-information" intelxdk:version="0.2.14"/>
+<intelxdk:plugin intelxdk:name="In App Browser" intelxdk:value="org.apache.cordova.inappbrowser" intelxdk:version="0.5.4"/>
 <preference name="ios-target" value="6"/>
 <preference name="ios-configuration" value="adhoc"/>
 <preference name="exit-on-suspend" value="false"/>
-<preference name="Fullscreen" value="false"/>
-<intelxdk:provisioning intelxdk:src="profileirregular.mobileprovision" intelxdk:type="adhoc"/>
+<preference name="Fullscreen" value="true"/>
+<intelxdk:provisioning intelxdk:src="profileirregular2.mobileprovision" intelxdk:type="adhoc"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>

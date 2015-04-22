@@ -162,6 +162,12 @@ $(function() {
       $.mobile.changePage("#lose-page", {transition: "flip"});
     }
 
+    function vencerGame() {
+      $("#msg-points-won").text(pontos);
+      $("#msg-verbs-seen-won").text(verbsGameGlobal.length + "/" + verbsGlobal.length);
+      $.mobile.changePage("#won-page", {transition: "flip"});
+    }
+
     function onBotaEnviarClick() {
         var verb;
         var answer;
@@ -189,6 +195,10 @@ $(function() {
 
         if (chanceGlobal === 0) {
           finalizeGame();
+        }
+
+        if (verbsGameGlobal.length === verbsGlobal.length && resposta === 1) {
+          vencerGame();
         }
     }
 
@@ -272,7 +282,7 @@ $(function() {
     $(".botao-enviar").click(onBotaEnviarClick);
     $("#myFilter").keyup(onMyFilterKeyUp);
     $(".menu-item").click(onMenuItemClick)
-    $("#botao-reload").click(onBotaoReloadClick);
+    $(".botao-reload").click(onBotaoReloadClick);
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
 

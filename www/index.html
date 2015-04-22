@@ -62,6 +62,9 @@
                     <li>
                         <a href="#game" class="menu-item"><img src="img/game.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">Game</span></a>
                     </li>
+                    <li>
+                      <a href="#about-page" class="menu-item"><img src="img/about.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">About</span></a>
+                    </li>
                 </ul>
             </div>
 
@@ -105,6 +108,9 @@
                   </li>
                   <li>
                       <a href="#game" class="menu-item"><img src="img/game.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">Game</span></a>
+                  </li>
+                  <li>
+                    <a href="#about-page" class="menu-item"><img src="img/about.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">About</span></a>
                   </li>
               </ul>
             </div>
@@ -155,6 +161,9 @@
                   <li>
                       <a href="#game" class="menu-item"><img src="img/game.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">Game</span></a>
                   </li>
+                  <li>
+                    <a href="#about-page" class="menu-item"><img src="img/about.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">About</span></a>
+                  </li>
               </ul>
             </div>
 
@@ -203,6 +212,9 @@
                   <li>
                       <a href="#game" class="menu-item"><img src="img/game.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">Game</span></a>
                   </li>
+                  <li>
+                    <a href="#about-page" class="menu-item"><img src="img/about.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">About</span></a>
+                  </li>
               </ul>
             </div>
 
@@ -231,18 +243,18 @@
                 <div class="ui-box-3" id="div-game-past" align="center">
                     <label for="answer-past">Past</label>
                     <input type="text" id="answer-past" name="answer-past" placeholder="Answer"  autocapitalize="off" autocorrect="off">
-                    <button data-inline="true" class="botao-enviar">Send</button>                    
+                    <button data-inline="true" class="botao-enviar">Send</button>
                 </div>
 
-                <div data-role="popup" id="popupRight" align="center" class="ui-box popup-points" data-overlay-theme="a" >
+                <div data-role="popup" id="popupRight" align="center" class="ui-box popup-points" style="background-color:#3bbec0" data-overlay-theme="a" >
                   <img src="img/verification.png" style="width:30px"/>
-                    <h1 style="color:blue">Right</h1>
+                    <h1 style="color:white">Right</h1>
                     <h2>+5 points</h2>
                 </div>
 
-                <div data-role="popup" id="popupWrong" align="center" class="ui-box-3 popup-points" style="background-color:white" data-overlay-theme="c" data-theme="c" data-dismissible="true" >
+                <div data-role="popup" id="popupWrong" align="center" class="ui-box-3  popup-points" style="background-color:#e87352" data-overlay-theme="c" data-theme="a" data-dismissible="true" >
                     <img src="img/cross.png" style="width:30px"/>
-                    <h1 style="color:red">Wrong</h1>
+                    <h1 style="color:white">Wrong</h1>
                     <h2 id="answer-chance">Lifes 0/0</h2>
                 </div>
 
@@ -254,7 +266,6 @@
                     <!-- <a href="#answer" data-transition="flip" class="ui-btn ui-corner-all ui-shadow ui-btn-inline botao-enviar">Send</a> -->
                 </div>
             </div>
-
         </div>
 
 <!-- **********************************************Respostas****************************************************** -->
@@ -304,17 +315,66 @@
 
         <div data-role="page" id="lose-page">
             <div data-role="main" class="ui-content ui-box-1" align="center">
-                <img src="img/lose.png" style="width:70px" />
+                <img src="img/lose.png" style="width:70px; -webkit-filter: invert(100%)" />
                 <h1 style="color:white">You lose</h1>
                 <p>Points :
                 <strong id="msg-points">0</strong></p>
                 <p>Seen verbs:
                 <strong id="msg-verbs-seen">1/91</strong></p>
 
-                <a href="#" class="ui-btn" id="botao-reload" ><i class="fa fa-refresh"></i>  Reload</a>
+                <a href="#" class="ui-btn botao-reload" ><i class="fa fa-refresh"></i>  Reload</a>
             </div>
 
         </div>
+
+<!-- *********************************************Won*******************************************************************     -->
+
+        <div data-role="page" id="won-page">
+          <div data-role="main" class="ui-content ui-box-1" align="center">
+            <img src="img/trophy.png" style="width:70px; -webkit-filter: invert(100%)" />
+            <h1 style="color:white">You won</h1>
+            <p>Points :
+            <strong id="msg-points-won">0</strong></p>
+            <p>Seen verbs:
+            <strong id="msg-verbs-seen-won">1/91</strong></p>
+
+            <a href="#" class="ui-btn botao-reload" ><i class="fa fa-refresh"></i>  Reload</a>
+          </div>
+        </div>
     </body>
+
+
+<!-- ***************************************************About**********************************************************     -->
+
+  <div data-role="page" id="about-page">
+    <div data-role="panel" id="menu03" data-theme="b" style="background-color:#16a085">
+      <ul data-role="listview" data-theme="b" >
+          <li data-role="list-divider"></li>
+          <li>
+            <a href="#list" class="menu-item"><img src="img/list.png" style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px" /><span  style="line-height:55px;">List all verbs</span></a>
+          </li>
+          <li>
+              <a href="#main" class="menu-item"><img src="img/verbs.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/> <span  style="line-height:55px;">Random verbs</span></a>
+          </li>
+          <li>
+              <a href="#game" class="menu-item"><img src="img/game.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">Game</span></a>
+          </li>
+          <li>
+            <a href="#about-page" class="menu-item"><img src="img/about.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">About</span></a>
+          </li>
+      </ul>
+    </div>
+
+    <div data-role="header" data-theme="b">
+        <p></p>
+        <a href="#menu03" data-role="button" ><i class="fa fa-bars fa-2x"></i></a>
+        <strong style="margin-left:80px;">Easy irregular verbs</strong>
+        <p></p>
+    </div>
+
+    <div data-role="main" class="ui-content" align="center">
+      <div class="ui-box-3"><p>Developed by Anderson Floriano</p>  Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>            is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+    </div>
+  </div>
 
 </html>

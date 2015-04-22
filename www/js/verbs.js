@@ -6,8 +6,13 @@ geraVerbs([
 	},
 	{
 		"normal":"be",
-		"past":"was, were",
+		"past":"was/were",
 		"participle":"been"
+	},
+	{
+		"normal":"bear",
+		"past":"bore",
+		"participle":"born"
 	},
 	{
 		"normal":"beat",
@@ -46,6 +51,11 @@ geraVerbs([
 		"participle":"bitten"
 	},
 	{
+		"normal":"bleed",
+		"past":"bled",
+		"participle":"bled"
+	},
+	{
 		"normal":"blow",
 		"past":"blew",
 		"participle":"blown"
@@ -72,13 +82,23 @@ geraVerbs([
 	},
 	{
 		"normal":"burn",
-		"past":"burned/burnt",
-		"participle":"burned/burnt"
+		"past":"burnt",
+		"participle":"burnt"
+	},
+	{
+		"normal":"burst",
+		"past":"burst",
+		"participle":"burst"
 	},
 	{
 		"normal":"buy",
 		"past":"bought",
 		"participle":"bought"
+	},
+	{
+		"normal":"cast",
+		"past":"cast",
+		"participle":"cast"
 	},
 	{
 "normal":"catch",
@@ -103,13 +123,21 @@ geraVerbs([
 "past":"cost",
 "participle":"cost"
 },
-
+{
+	"normal":"creep",
+	"past":"crept",
+	"participle":"crept"
+},
 {
 "normal":"cut",
 "past":"cut",
 "participle":"cut"
 },
-
+{
+	"normal":"deal",
+	"past":"dealt",
+	"participle":"dealt"
+},
 {
 "normal":"dig",
 "past":"dug",
@@ -130,8 +158,13 @@ geraVerbs([
 
 {
 "normal":"dream",
-"past":"dreamed or dreamt",
-"participle":"dreamed or dreamt"
+"past":"dreamt",
+"participle":"dreamt"
+},
+{
+"normal":"drink",
+"past":"drank",
+"participle":"drunk"
 },
 
 {
@@ -140,11 +173,6 @@ geraVerbs([
 "participle":"driven"
 },
 
-{
-"normal":"drink",
-"past":"drank",
-"participle":"drunk"
-},
 
 {
 "normal":"eat",
@@ -156,6 +184,11 @@ geraVerbs([
 "normal":"fall",
 "past":"fell",
 "participle":"fallen"
+},
+{
+"normal":"feed",
+"past":"fed",
+"participle":"fed"
 },
 
 {
@@ -181,6 +214,11 @@ geraVerbs([
 "past":"flew",
 "participle":"flown"
 },
+{
+"normal":"forbid",
+"past":"forbade",
+"participle":"forbidden"
+},
 
 {
 "normal":"forget",
@@ -203,7 +241,7 @@ geraVerbs([
 {
 "normal":"get",
 "past":"got",
-"participle":"got(sometimes gotten)"
+"participle":"gotten"
 },
 
 {
@@ -292,8 +330,8 @@ geraVerbs([
 
 {
 "normal":"learn",
-"past":"learned or learnt",
-"participle":"learned or learnt"
+"past":"learnt",
+"participle":"learnt"
 },
 
 {
@@ -413,7 +451,7 @@ geraVerbs([
 {
 "normal":"show",
 "past":"showed",
-"participle":"showed or shown"
+"participle":"shown"
 },
 
 {
