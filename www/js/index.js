@@ -4,7 +4,7 @@ var actualVerb;
 var adUnit = "ca-app-pub-5978610397346153/5358045629";
 var adUnitFullScreen = "ca-app-pub-5978610397346153/8054160024";
 var isOverlap = true; //true: overlap, false: split
-var isTest = true;
+var isTest = false;
 var adPreLoaded = false;
 
 document.addEventListener("deviceready", function(){

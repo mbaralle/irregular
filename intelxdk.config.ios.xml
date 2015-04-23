@@ -25,8 +25,8 @@
 <intelxdk:plugin intelxdk:name="Connection" intelxdk:value="org.apache.cordova.network-information" intelxdk:version="0.2.14"/>
 <intelxdk:plugin intelxdk:name="In App Browser" intelxdk:value="org.apache.cordova.inappbrowser" intelxdk:version="0.5.4"/>
 <preference name="ios-target" value="6"/>
-<preference name="ios-configuration" value="adhoc"/>
+<preference name="ios-configuration" value="production"/>
 <preference name="exit-on-suspend" value="false"/>
 <preference name="Fullscreen" value="true"/>
-<intelxdk:provisioning intelxdk:src="profileirregular.mobileprovision" intelxdk:type="adhoc"/>
+<intelxdk:provisioning intelxdk:src="OficialProfile.mobileprovision" intelxdk:type="production"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>
