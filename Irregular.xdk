@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "0758990e-69d4-4b7b-a2cf-c07fd6baa308",
-      "lastModifiedDate": 1429734638102,
+      "lastModifiedDate": 1429757917742,
       "creationDate": 1428951135344
     },
     "sourceDirectory": "www",
@@ -251,8 +251,12 @@
         "cordovaCLIVersion_": "4.1.2",
         "iosProvs_": [
           {
-            "relPath": "profileirregular2.mobileprovision",
+            "relPath": "profileirregular.mobileprovision",
             "type": "adhoc"
+          },
+          {
+            "relPath": "OficialProfile.mobileprovision",
+            "type": "production"
           }
         ],
         "appDescription_": "Easy Irregular Verb",

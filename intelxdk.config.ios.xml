@@ -28,5 +28,5 @@
 <preference name="ios-configuration" value="adhoc"/>
 <preference name="exit-on-suspend" value="false"/>
 <preference name="Fullscreen" value="true"/>
-<intelxdk:provisioning intelxdk:src="profileirregular2.mobileprovision" intelxdk:type="adhoc"/>
+<intelxdk:provisioning intelxdk:src="profileirregular.mobileprovision" intelxdk:type="adhoc"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>

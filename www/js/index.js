@@ -8,6 +8,7 @@ var isTest = true;
 var adPreLoaded = false;
 
 document.addEventListener("deviceready", function(){
+            //window.open = cordova.InAppBrowser.open;
 
             window.admob.setUp(adUnit, adUnitFullScreen, isOverlap, isTest);
 
@@ -276,6 +277,19 @@ $(function() {
       $.mobile.changePage("#game", {transition: "flip"});
     }
 
+    function onLinkClick() {
+      window.open('http://www.flaticon.com/authors/freepik', '_system', 'location=yes');
+    }
+
+    function onLink2Click() {
+      window.open('http://www.flaticon.com', '_system', 'location=yes');
+    }
+
+    function onLink3Click() {
+      window.open('http://creativecommons.org/licenses/by/3.0/', '_system', 'location=yes');
+    }
+
+
     $(document).on("pageshow","#game", onPageGameShow);
     $(document).on("pageshow", "#main", onBotaoGerarClick);
     $("#botao-gerar").click(onBotaoGerarClick);
@@ -283,6 +297,9 @@ $(function() {
     $("#myFilter").keyup(onMyFilterKeyUp);
     $(".menu-item").click(onMenuItemClick)
     $(".botao-reload").click(onBotaoReloadClick);
+    $("#link-externo-01").click(onLinkClick);
+    $("#link-externo-02").click(onLink2Click);
+    $("#link-externo-03").click(onLink3Click);
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
 
