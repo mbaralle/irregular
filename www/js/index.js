@@ -289,6 +289,9 @@ $(function() {
       window.open('http://creativecommons.org/licenses/by/3.0/', '_system', 'location=yes');
     }
 
+    function onPopupClose() {
+      $(".popup").popup("close");
+    }
 
     $(document).on("pageshow","#game", onPageGameShow);
     $(document).on("pageshow", "#main", onBotaoGerarClick);
@@ -300,6 +303,7 @@ $(function() {
     $("#link-externo-01").click(onLinkClick);
     $("#link-externo-02").click(onLink2Click);
     $("#link-externo-03").click(onLink3Click);
+    $(".popup").click(onPopupClose)
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
 
