@@ -7,6 +7,45 @@ var isOverlap = true; //true: overlap, false: split
 var isTest = false;
 var adPreLoaded = false;
 
+function onConfirm(buttonIndex) {
+  if (buttonIndex === 1) {
+    localStorage.setItem("qtyOpen", "-1");
+    window.open('https://itunes.apple.com/us/app/easy-irregular-verbs/id988501144?mt=8', '_system', 'location=yes');
+  }
+  if (buttonIndex === 3) {
+    localStorage.setItem("qtyOpen", "-1");
+  }
+}
+
+function deveExibirReview() {
+  var qtyOpen = localStorage.getItem("qtyOpen");
+
+  if (qtyOpen !== "-1") {
+    qtyOpen++;
+
+    if (qtyOpen >= 3) {
+      return true;
+    }
+    else {
+      localStorage.setItem("qtyOpen", qtyOpen);
+    }
+  }
+
+  return false;
+
+}
+
+function showReview() {
+  if (deveExibirReview()) {
+    navigator.notification.confirm(
+      "If you liked this app, please, let us know. Thanks!",
+      onConfirm,
+      "Review",
+      ["Sure", "Later", "No, thanks!"]
+    );
+  }
+}
+
 document.addEventListener("deviceready", function(){
             //window.open = cordova.InAppBrowser.open;
 
@@ -38,6 +77,7 @@ document.addEventListener("deviceready", function(){
             window.admob.preloadBannerAd();
             window.admob.preloadFullScreenAd();
 
+            showReview();
 }, false);
 
 var myScroll;
@@ -79,7 +119,9 @@ $(function() {
 
 
         var owl = $("#owl-demo").data('owlCarousel');
-        owl.goTo(0)
+        owl.goTo(0);
+
+        gerarAd();
     }
 
     function addVerbList() {
@@ -293,6 +335,21 @@ $(function() {
       $(".popup").popup("close");
     }
 
+    var countAd = 0;
+
+    function gerarAd() {
+      countAd++;
+
+      if (countAd >= 3 && adPreLoaded) {
+        window.admob.showFullScreenAd();
+        countAd = 0;
+      }
+    }
+
+    function onBotaoVoltarClick() {
+      gerarAd();
+    }
+
     $(document).on("pageshow","#game", onPageGameShow);
     $(document).on("pageshow", "#main", onBotaoGerarClick);
     $("#botao-gerar").click(onBotaoGerarClick);
@@ -304,6 +361,7 @@ $(function() {
     $("#link-externo-02").click(onLink2Click);
     $("#link-externo-03").click(onLink3Click);
     $(".popup").click(onPopupClose)
+    $("#botao-voltar").click(onBotaoVoltarClick);
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
 
@@ -322,5 +380,5 @@ $(function() {
 
     onBotaoGerarClick();
 
-     addVerbList();
+    addVerbList();
 })

@@ -39,7 +39,7 @@
         <script src="js/owl.carousel.js"></script>
         <script type="text/javascript" src="js/iscroll-lite.js"></script>
         <script src='cordova.js'></script>
-        <script type="text/javascript" src="fastclick.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
 
 
   <!-- Include the jQuery Mobile library -->
@@ -240,11 +240,20 @@
                     <h2 align="center" id="game-irregular-verb" style="color: white"></h2>
                 </div>
 
-                <div class="ui-box-3" id="div-game-past" align="center">
-                    <label for="answer-past">Past</label>
-                    <input type="text" id="answer-past" name="answer-past" placeholder="Answer"  autocapitalize="off" autocorrect="off">
-                    <button data-inline="true" class="botao-enviar">Send</button>
+
+                <div class="ui-box-4" id="div-game-past" align="center">
+
+                  <div class="ui-box-header">
+                    <p>
+                      Past
+                    </p>
+                  </div>
+
+                  <input type="text" id="answer-past" name="answer-past" placeholder="Answer"  autocapitalize="off" autocorrect="off">
+                  <button data-inline="true" class="botao-enviar">Send</button>
                 </div>
+
+
 
                 <div data-role="popup" id="popupRight" align="center" class="ui-box popup-points popup" style="background-color:#3bbec0" data-overlay-theme="a" >
                   <img src="img/verification.png" style="width:30px"/>
@@ -258,8 +267,13 @@
                     <h2 id="answer-chance">Lifes 0/0</h2>
                 </div>
 
-                <div class="ui-box-3" id="div-game-participle" align="center" style="display:none">
-                    <label for="answer-participle">Participle</label>
+                <div class="ui-box-4" id="div-game-participle" align="center" style="display:none">
+                    <div class="ui-box-header-2">
+                      <p>
+                        Participle
+                      </p>
+                    </div>
+
                     <input type="text" id="answer-participle" name="answer-participle" placeholder="Answer" autocapitalize="off" autocorrect="off">
                     <button data-inline="true" class="botao-enviar">Send</button>
 

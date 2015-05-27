@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "0758990e-69d4-4b7b-a2cf-c07fd6baa308",
-      "lastModifiedDate": 1429758579766,
+      "lastModifiedDate": 1431199588492,
       "creationDate": 1428951135344
     },
     "sourceDirectory": "www",
@@ -39,6 +39,15 @@
       {
         "id": "org.apache.cordova.network-information",
         "version": "0.2.14",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.dialogs",
+        "version": "0.2.11",
         "selectedState": "Included",
         "data": {},
         "paramvals": {},
@@ -247,7 +256,7 @@
         ],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "appVersion_": "0.0.1",
+        "appVersion_": "0.0.2",
         "cordovaCLIVersion_": "4.1.2",
         "iosProvs_": [
           {

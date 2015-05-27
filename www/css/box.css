@@ -41,6 +41,27 @@
     margin-right: auto;
 }
 
+
+.ui-box-header {
+    background-color: #ebc85e;
+    padding:1px;
+}
+
+.ui-box-header-2 {
+    background-color: #3bbec0;
+    padding:1px;
+}
+
+.ui-box-4 {
+    background: none;
+    border: 1px solid #b6b9be;
+    color: #2f3948;
+    width: 300px;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #wrapper {
     position: absolute;
     z-index: 1;
