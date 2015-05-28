@@ -78,6 +78,17 @@ document.addEventListener("deviceready", function(){
             window.admob.preloadFullScreenAd();
 
             showReview();
+
+
+            ttsPlugin.setRate(0.2); // Set voice speed : default is "0.2"
+
+            ttsPlugin.setLanguage("en-US"); // Set voice language : default is "en-US"
+
+            ttsPlugin.initTTS(function() {}, function() {}); // Init Plugin : failCallBack doesn't work yet
+
+            ttsPlugin.speak("");
+            ttsPlugin.stopSpeaking();
+
 }, false);
 
 var myScroll;
@@ -340,7 +351,7 @@ $(function() {
     function gerarAd() {
       countAd++;
 
-      if (countAd >= 3 && adPreLoaded) {
+      if (countAd >= 5 && adPreLoaded) {
         window.admob.showFullScreenAd();
         countAd = 0;
       }
@@ -348,6 +359,50 @@ $(function() {
 
     function onBotaoVoltarClick() {
       gerarAd();
+    }
+
+    const NORMAL = 0;
+    const PAST = 1;
+    const PARTICIPLE = 2;
+
+
+    function getSpeakVerb(time) {
+      switch (time) {
+        case NORMAL:
+          return actualVerb.normal;
+          break;
+        case PAST:
+          if (actualVerb.past.toLowerCase() === "read")
+            return "red";
+          else
+            return actualVerb.past;
+          break;
+        case PARTICIPLE:
+          if (actualVerb.past.toLowerCase() === "read")
+            return "red";
+          else
+            return actualVerb.participle;
+          break;
+      }
+    }
+
+    function speak(word) {
+      ttsPlugin.speak(word); // Say Hello
+
+      ttsPlugin.stopSpeaking(); // Try to stop speaking
+    }
+
+
+    function onSpeakNormalClick() {
+      speak(getSpeakVerb(NORMAL));
+    }
+
+    function onSpeakPastClick() {
+      speak(getSpeakVerb(PAST));
+    }
+
+    function onSpeakParticipleClick() {
+      speak(getSpeakVerb(PARTICIPLE));
     }
 
     $(document).on("pageshow","#game", onPageGameShow);
@@ -362,6 +417,9 @@ $(function() {
     $("#link-externo-03").click(onLink3Click);
     $(".popup").click(onPopupClose)
     $("#botao-voltar").click(onBotaoVoltarClick);
+    $(".speak-normal").click(onSpeakNormalClick);
+    $(".speak-past").click(onSpeakPastClick);
+    $(".speak-particle").click(onSpeakParticipleClick);
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
 

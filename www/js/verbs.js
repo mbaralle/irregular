@@ -6,7 +6,7 @@ geraVerbs([
 	},
 	{
 		"normal":"be",
-		"past":"was/were",
+		"past":"was",
 		"participle":"been"
 	},
 	{
