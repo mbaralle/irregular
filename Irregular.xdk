@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "0758990e-69d4-4b7b-a2cf-c07fd6baa308",
-      "lastModifiedDate": 1432824582561,
+      "lastModifiedDate": 1433956273835,
       "creationDate": 1428951135344
     },
     "sourceDirectory": "www",
@@ -185,7 +185,7 @@
         "name_": "iOS",
         "preferences_": {
           "ios-target": "6",
-          "ios-configuration": "production",
+          "ios-configuration": "adhoc",
           "exit-on-suspend": false,
           "Fullscreen": true
         },

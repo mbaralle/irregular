@@ -346,6 +346,7 @@
                 <strong id="msg-verbs-seen">1/91</strong></p>
 
                 <a href="#" class="ui-btn botao-reload" ><i class="fa fa-refresh"></i>  Reload</a>
+                <a href="#list-verbs-game" class="ui-btn botao-review-game" ><i class="fa fa-refresh"></i>  Review</a>
             </div>
 
         </div>
@@ -364,7 +365,7 @@
             <a href="#" class="ui-btn botao-reload" ><i class="fa fa-refresh"></i>  Reload</a>
           </div>
         </div>
-    </body>
+
 
 
 <!-- ***************************************************About**********************************************************     -->
@@ -400,4 +401,42 @@
     </div>
   </div>
 
+  <!-- ************************************************Lista verbos game*************************************************** -->
+  <div data-role="page" id="list-verbs-game">
+    <div data-role="panel" id="menu05" data-theme="b" style="background-color:#16a085">
+      <ul data-role="listview" data-theme="b" >
+          <li data-role="list-divider"></li>
+          <li>
+            <a href="#list" class="menu-item"><img src="img/list.png" style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px" /><span  style="line-height:55px;">List all verbs</span></a>
+          </li>
+          <li>
+              <a href="#main" class="menu-item"><img src="img/verbs.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/> <span  style="line-height:55px;">Random verbs</span></a>
+          </li>
+          <li>
+              <a href="#game" class="menu-item"><img src="img/game.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">Game</span></a>
+          </li>
+          <li>
+            <a href="#about-page" class="menu-item"><img src="img/about.png"  style="-webkit-filter: invert(100%);width:50px; margin-top:15px; margin-left:40px"/><span  style="line-height:55px;">About</span></a>
+          </li>
+      </ul>
+    </div>
+
+    <div data-role="header" data-theme="b">
+        <p></p>
+        <a href="#menu05" data-role="button" ><i class="fa fa-bars fa-2x"></i></a>
+        <strong style="margin-left:80px;">Easy irregular verbs</strong>
+        <p></p>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div id="div-list-game">
+        <div id="nova">
+          <ul data-role="listview"  id="list-game" data-theme="c" data-autodividers="false" >
+
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
 </html>

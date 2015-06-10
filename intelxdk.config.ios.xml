@@ -27,8 +27,8 @@
 <intelxdk:plugin intelxdk:name="In App Browser" intelxdk:value="org.apache.cordova.inappbrowser" intelxdk:version="0.5.4"/>
 <intelxdk:plugin intelxdk:name="cordova3-ios-tts-plugin" intelxdk:value="https://github.com/steevelefort/cordova3-ios-tts-plugin.git"/>
 <preference name="ios-target" value="6"/>
-<preference name="ios-configuration" value="production"/>
+<preference name="ios-configuration" value="adhoc"/>
 <preference name="exit-on-suspend" value="false"/>
 <preference name="Fullscreen" value="true"/>
-<intelxdk:provisioning intelxdk:src="OficialProfile.mobileprovision" intelxdk:type="production"/>
+<intelxdk:provisioning intelxdk:src="profileirregular.mobileprovision" intelxdk:type="adhoc"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}--></widget>

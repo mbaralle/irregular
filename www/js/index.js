@@ -92,9 +92,11 @@ document.addEventListener("deviceready", function(){
 }, false);
 
 var myScroll;
+var ScrollGame;
 
 function loaded () {
     myScroll = new IScroll('#wrapper', { mouseWheel: true, disableTouch: false, click: true});
+    ScrollGame = new IScroll('#div-list-game', {mouseWheel: true, disableTouch: false, click: true});
 
     console.log("loaded");
 }
@@ -361,6 +363,41 @@ $(function() {
       gerarAd();
     }
 
+    function setActualVerb(verb) {
+      for (var i = 0; i < verbsGlobal.length; i++) {
+        if (verbsGlobal[i].normal === verb) {
+          actualVerb = verbsGlobal[i];
+        }
+      }
+    }
+
+    function reviewVerbsGame() {
+      ScrollGame.destroy();
+      ScrollGame = null;
+
+      $("#list-game").empty();
+
+      for (var i = 0; i < verbsGameGlobal.length; i++) {
+          $("#list-game").append("<li class='item-list-review' value='"  + i + "''><a href='#item-verb'>" + verbsGameGlobal[i] + "</a></li>");
+      };
+
+      ScrollGame = new IScroll('#div-list-game', {mouseWheel: true, disableTouch: false, click: true});
+
+      $(".item-list-review").off("click");
+
+      $(".item-list-review").click(function() {
+          var i = $(this).val();
+          setActualVerb(verbsGameGlobal[i]);
+
+          $("#actual-irregular-verb").text(actualVerb.normal);
+          $("#actual-past-verb").text(actualVerb.past);
+          $("#actual-past-participle").text(actualVerb.participle);
+
+          var owl = $("#owl-actual-verbs").data('owlCarousel');
+          owl.goTo(0)
+      });
+    }
+
     const NORMAL = 0;
     const PAST = 1;
     const PARTICIPLE = 2;
@@ -405,6 +442,10 @@ $(function() {
       speak(getSpeakVerb(PARTICIPLE));
     }
 
+    $(document).on("pageshow", "#list-verbs-game", function() {
+      //ScrollGame = new IScroll('#div-list-game', {mouseWheel: true, disableTouch: false, click: true});
+    });
+
     $(document).on("pageshow","#game", onPageGameShow);
     $(document).on("pageshow", "#main", onBotaoGerarClick);
     $("#botao-gerar").click(onBotaoGerarClick);
@@ -420,6 +461,7 @@ $(function() {
     $(".speak-normal").click(onSpeakNormalClick);
     $(".speak-past").click(onSpeakPastClick);
     $(".speak-particle").click(onSpeakParticipleClick);
+    $(".botao-review-game").click(reviewVerbsGame);
 
     $(".popup-points").bind({popupafterclose : onMyPopupDialogClose });
 
