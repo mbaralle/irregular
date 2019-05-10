@@ -143,7 +143,7 @@ geraVerbs([
 	"normal":"cost",
 	"past":"cost",
 	"participle":"cost",
-	"french":"choisir"
+	"french":"coûter"
 },
 {
 	"normal":"creep",
