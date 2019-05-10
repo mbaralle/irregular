@@ -1,571 +1,599 @@
 geraVerbs([
-	{
-		"normal":"awake",
-		"past":"awoke",
-		"participle":"awoken"
-	},
-	{
-		"normal":"be",
-		"past":"was/were",
-		"participle":"been"
-	},
-	{
-		"normal":"bear",
-		"past":"bore",
-		"participle":"born"
-	},
-	{
-		"normal":"beat",
-		"past":"beat",
-		"participle":"beaten"
-	},
-	{
-		"normal":"become",
-		"past":"became",
-		"participle":"become"
-	},
-	{
-		"normal":"begin",
-		"past":"began",
-		"participle":"begun"
-	},
-
-	{
-		"normal":"bend",
-		"past":"bent",
-		"participle":"bent"
-	},
-	{
-		"normal":"bet",
-		"past":"bet",
-		"participle":"bet"
-	},
-	{
-		"normal":"bid",
-		"past":"bid",
-		"participle":"bid"
-	},
-	{
-		"normal":"bite",
-		"past":"bit",
-		"participle":"bitten"
-	},
-	{
-		"normal":"bleed",
-		"past":"bled",
-		"participle":"bled"
-	},
-	{
-		"normal":"blow",
-		"past":"blew",
-		"participle":"blown"
-	},
-	{
-		"normal":"breake",
-		"past":"broke",
-		"participle":"broken"
-	},
-	{
-		"normal":"bring",
-		"past":"brought",
-		"participle":"brought"
-	},
-	{
-		"normal":"broadcast",
-		"past":"broadcast",
-		"participle":"broadcast"
-	},
-	{
-		"normal":"build",
-		"past":"built",
-		"participle":"built"
-	},
-	{
-		"normal":"burn",
-		"past":"burnt",
-		"participle":"burnt"
-	},
-	{
-		"normal":"burst",
-		"past":"burst",
-		"participle":"burst"
-	},
-	{
-		"normal":"buy",
-		"past":"bought",
-		"participle":"bought"
-	},
-	{
-		"normal":"cast",
-		"past":"cast",
-		"participle":"cast"
-	},
-	{
-"normal":"catch",
-"past":"caught",
-"participle":"caught"
+{
+	"normal":"awake",
+	"past":"awoke",
+	"participle":"awoken",
+	"french":"réveiller"
+},
+{
+	"normal":"be",
+	"past":"was/were",
+	"participle":"been",
+	"french":"être"
+},
+{
+	"normal":"bear",
+	"past":"bore",
+	"participle":"born",
+	"french":"naître"
+},
+{
+	"normal":"beat",
+	"past":"beat",
+	"participle":"beaten",
+	"french":"frapper"
+},
+{
+	"normal":"become",
+	"past":"became",
+	"participle":"become",
+	"french":"devenir"
+},
+{
+	"normal":"begin",
+	"past":"began",
+	"participle":"begun",
+	"french":"commencer"
 },
 
 {
-"normal":"choose",
-"past":"chose",
-"participle":"chosen"
+	"normal":"bend",
+	"past":"bent",
+	"participle":"bent",
+	"french":"plier"
+},
+{
+	"normal":"bet",
+	"past":"bet",
+	"participle":"bet",
+	"french":"parier"
+},
+{
+	"normal":"bid",
+	"past":"bid",
+	"participle":"bid",
+	"french":"faire une offre/enchérir"
+},
+{
+	"normal":"bite",
+	"past":"bit",
+	"participle":"bitten",
+	"french":"mordre"
+},
+{
+	"normal":"bleed",
+	"past":"bled",
+	"participle":"bled",
+	"french":"saigner"
+},
+{
+	"normal":"blow",
+	"past":"blew",
+	"participle":"blown",
+	"french":"souffler"
+},
+{
+	"normal":"breake",
+	"past":"broke",
+	"participle":"broken",
+	"french":"casser"
+},
+{
+	"normal":"bring",
+	"past":"brought",
+	"participle":"brought",
+	"french":"apporter"
+},
+{
+	"normal":"broadcast",
+	"past":"broadcast",
+	"participle":"broadcast",
+	"french":"diffuser"
+},
+{
+	"normal":"build",
+	"past":"built",
+	"participle":"built",
+	"french":"construire"
+},
+{
+	"normal":"burn",
+	"past":"burnt",
+	"participle":"burnt",
+	"french":"brûler"
+},
+{
+	"normal":"burst",
+	"past":"burst",
+	"participle":"burst",
+	"french":"éclater"
+},
+{
+	"normal":"buy",
+	"past":"bought",
+	"participle":"bought",
+	"french":"acheter"
+},
+{
+	"normal":"cast",
+	"past":"cast",
+	"participle":"cast",
+	"french":"lancer"
+},
+{
+	"normal":"catch",
+	"past":"caught",
+	"participle":"caught",
+	"french":"attraper"
+},
+{
+	"normal":"choose",
+	"past":"chose",
+	"participle":"chosen",
+	"french":"choisir"
+},
+{
+	"normal":"come",
+	"past":"came",
+	"participle":"come",
+	"french":"venir"
 },
 
 {
-"normal":"come",
-"past":"came",
-"participle":"come"
-},
-
-{
-"normal":"cost",
-"past":"cost",
-"participle":"cost"
+	"normal":"cost",
+	"past":"cost",
+	"participle":"cost",
+	"french":"choisir"
 },
 {
 	"normal":"creep",
 	"past":"crept",
-	"participle":"crept"
+	"participle":"crept",
+	"french":"se glisser"
 },
 {
-"normal":"cut",
-"past":"cut",
-"participle":"cut"
+	"normal":"cut",
+	"past":"cut",
+	"participle":"cut",
+	"french":"couper"
 },
 {
 	"normal":"deal",
 	"past":"dealt",
-	"participle":"dealt"
+	"participle":"dealt",
+	"french":"traiter/agir/commercer"
 },
 {
-"normal":"dig",
-"past":"dug",
-"participle":"dug"
+	"normal":"dig",
+	"past":"dug",
+	"participle":"dug",
+	"french":"creuser"
 },
-
 {
-"normal":"do",
-"past":"did",
-"participle":"done"
+	"normal":"do",
+	"past":"did",
+	"participle":"done",
+	"french":"faire"
 },
-
 {
-"normal":"draw",
-"past":"drew",
-"participle":"drawn"
+	"normal":"draw",
+	"past":"drew",
+	"participle":"drawn",
+	"french":"dessiner"
 },
-
 {
-"normal":"dream",
-"past":"dreamt",
-"participle":"dreamt"
+	"normal":"dream",
+	"past":"dreamt",
+	"participle":"dreamt",
+	"french":"rêver"
 },
 {
-"normal":"drink",
-"past":"drank",
-"participle":"drunk"
+	"normal":"drink",
+	"past":"drank",
+	"participle":"drunk",
+	"french":"boire"
 },
-
 {
-"normal":"drive",
-"past":"drove",
-"participle":"driven"
+	"normal":"drive",
+	"past":"drove",
+	"participle":"driven",
+	"french":"conduire"
 },
-
-
 {
-"normal":"eat",
-"past":"ate",
-"participle":"eaten"
+	"normal":"eat",
+	"past":"ate",
+	"participle":"eaten",
+	"french":"manger"
 },
-
 {
-"normal":"fall",
-"past":"fell",
-"participle":"fallen"
+	"normal":"fall",
+	"past":"fell",
+	"participle":"fallen",
+	"french":"tomber"
 },
 {
-"normal":"feed",
-"past":"fed",
-"participle":"fed"
+	"normal":"feed",
+	"past":"fed",
+	"participle":"fed",
+	"french":"nourrir"
 },
-
 {
-"normal":"feel",
-"past":"felt",
-"participle":"felt"
+	"normal":"feel",
+	"past":"felt",
+	"participle":"felt",
+	"french":"ressentir"
 },
-
 {
-"normal":"fight",
-"past":"fought",
-"participle":"fought"
+	"normal":"fight",
+	"past":"fought",
+	"participle":"fought",
+	"french":"se battre"
 },
-
 {
-"normal":"find",
-"past":"found",
-"participle":"found"
+	"normal":"find",
+	"past":"found",
+	"participle":"found",
+	"french":"trouver"
 },
-
 {
-"normal":"fly",
-"past":"flew",
-"participle":"flown"
+	"normal":"fly",
+	"past":"flew",
+	"participle":"flown",
+	"french":"voler"
 },
 {
-"normal":"forbid",
-"past":"forbade",
-"participle":"forbidden"
+	"normal":"forbid",
+	"past":"forbade",
+	"participle":"forbidden",
+	"french":"interdire"
 },
-
 {
-"normal":"forget",
-"past":"forgot",
-"participle":"forgotten"
+	"normal":"forget",
+	"past":"forgot",
+	"participle":"forgotten",
+	"french":"oublier"
 },
-
 {
-"normal":"forgive",
-"past":"forgave",
-"participle":"forgiven"
+	"normal":"forgive",
+	"past":"forgave",
+	"participle":"forgiven",
+	"french":"pardonner"
 },
-
 {
-"normal":"freeze",
-"past":"froze",
-"participle":"frozen"
+	"normal":"freeze",
+	"past":"froze",
+	"participle":"frozen",
+	"french":"geler"
 },
-
 {
-"normal":"get",
-"past":"got",
-"participle":"gotten"
+	"normal":"get",
+	"past":"got",
+	"participle":"gotten",
+	"french":"obtenir"
 },
-
 {
-"normal":"give",
-"past":"gave",
-"participle":"given"
+	"normal":"give",
+	"past":"gave",
+	"participle":"given",
+	"french":"donner"
 },
-
 {
-"normal":"go",
-"past":"went",
-"participle":"gone"
+	"normal":"go",
+	"past":"went",
+	"participle":"gone",
+	"french":"aller"
 },
-
 {
-"normal":"grow",
-"past":"grew",
-"participle":"grown"
+	"normal":"grow",
+	"past":"grew",
+	"participle":"grown",
+	"french":"grandir/croître"
 },
-
 {
-"normal":"hang",
-"past":"hung",
-"participle":"hung"
+	"normal":"hang",
+	"past":"hung",
+	"participle":"hung",
+	"french":"pendre/accrocher"
 },
-
 {
-"normal":"have",
-"past":"had",
-"participle":"had"
+	"normal":"have",
+	"past":"had",
+	"participle":"had",
+	"french":"avoir"
 },
-
 {
-"normal":"hear",
-"past":"heard",
-"participle":"heard"
+	"normal":"hear",
+	"past":"heard",
+	"participle":"heard",
+	"french":"entendre"
 },
-
 {
-"normal":"hide",
-"past":"hid",
-"participle":"hidden"
+	"normal":"hide",
+	"past":"hid",
+	"participle":"hidden",
+	"french":"cacher"
 },
-
 {
-"normal":"hit",
-"past":"hit",
-"participle":"hit"
+	"normal":"hit",
+	"past":"hit",
+	"participle":"hit",
+	"french":"frapper"
 },
-
 {
-"normal":"hold",
-"past":"held",
-"participle":"held"
+	"normal":"hold",
+	"past":"held",
+	"participle":"held",
+	"french":"tenir"
 },
-
 {
-"normal":"hurt",
-"past":"hurt",
-"participle":"hurt"
+	"normal":"hurt",
+	"past":"hurt",
+	"participle":"hurt",
+	"french":"blesser"
 },
-
 {
-"normal":"keep",
-"past":"kept",
-"participle":"kept"
+	"normal":"keep",
+	"past":"kept",
+	"participle":"kept",
+	"french":"garder"
 },
-
 {
-"normal":"know",
-"past":"knew",
-"participle":"known"
+	"normal":"know",
+	"past":"knew",
+	"participle":"known",
+	"french":"savoir"
 },
-
 {
-"normal":"lay",
-"past":"laid",
-"participle":"laid"
+	"normal":"lay",
+	"past":"laid",
+	"participle":"laid",
+	"french":"poser/allonger"
 },
-
 {
-"normal":"lead",
-"past":"led",
-"participle":"led"
+	"normal":"lead",
+	"past":"led",
+	"participle":"led",
+	"french":"mener/guider"
 },
-
 {
-"normal":"learn",
-"past":"learnt",
-"participle":"learnt"
+	"normal":"learn",
+	"past":"learnt",
+	"participle":"learnt",
+	"french":"apprendre"
 },
-
 {
-"normal":"leave",
-"past":"left",
-"participle":"left"
+	"normal":"leave",
+	"past":"left",
+	"participle":"left",
+	"french":"laisser/quitter"
 },
-
 {
-"normal":"lend",
-"past":"lent",
-"participle":"lent"
+	"normal":"lend",
+	"past":"lent",
+	"participle":"lent",
+	"french":"prêter"
 },
-
 {
-"normal":"let",
-"past":"let",
-"participle":"let"
+	"normal":"let",
+	"past":"let",
+	"participle":"let",
+	"french":"laisser/permettre"
 },
-
 {
-"normal":"lie",
-"past":"lay",
-"participle":"lain"
+	"normal":"lie",
+	"past":"lay",
+	"participle":"lain",
+	"french":"mentir"
 },
-
 {
-"normal":"lose",
-"past":"lost",
-"participle":"lost"
+	"normal":"lose",
+	"past":"lost",
+	"participle":"lost",
+	"french":"perdre"
 },
-
 {
-"normal":"make",
-"past":"made",
-"participle":"made"
+	"normal":"make",
+	"past":"made",
+	"participle":"made",
+	"french":"faire/fabriquer"
 },
-
 {
-"normal":"mean",
-"past":"meant",
-"participle":"meant"
+	"normal":"mean",
+	"past":"meant",
+	"participle":"meant",
+	"french":"signifier/vouloir dire"
 },
-
 {
-"normal":"meet",
-"past":"met",
-"participle":"met"
+	"normal":"meet",
+	"past":"met",
+	"participle":"met",
+	"french":"rencontrer"
 },
-
 {
-"normal":"pay",
-"past":"paid",
-"participle":"paid"
+	"normal":"pay",
+	"past":"paid",
+	"participle":"paid",
+	"french":"payer"
 },
-
 {
-"normal":"put",
-"past":"put",
-"participle":"put"
+	"normal":"put",
+	"past":"put",
+	"participle":"put",
+	"french":"mettre/poser"
 },
-
 {
-"normal":"read",
-"past":"read",
-"participle":"read"
+	"normal":"read",
+	"past":"read",
+	"participle":"read",
+	"french":"lire"
 },
-
 {
-"normal":"ride",
-"past":"rode",
-"participle":"ridden"
+	"normal":"ride",
+	"past":"rode",
+	"participle":"ridden",
+	"french":"monter (cheval, vélo...)"
 },
-
 {
-"normal":"ring",
-"past":"rang",
-"participle":"rung"
+	"normal":"ring",
+	"past":"rang",
+	"participle":"rung",
+	"french":"sonner"
 },
-
 {
-"normal":"rise",
-"past":"rose",
-"participle":"risen"
+	"normal":"rise",
+	"past":"rose",
+	"participle":"risen",
+	"french":"monter/s'élever"
 },
-
 {
-"normal":"run",
-"past":"ran",
-"participle":"run"
+	"normal":"run",
+	"past":"ran",
+	"participle":"run",
+	"french":"courir"
 },
-
 {
-"normal":"say",
-"past":"said",
-"participle":"said"
+	"normal":"say",
+	"past":"said",
+	"participle":"said",
+	"french":"dire"
 },
-
 {
-"normal":"see",
-"past":"saw",
-"participle":"seen"
+	"normal":"see",
+	"past":"saw",
+	"participle":"seen",
+	"french":"voir"
 },
-
 {
-"normal":"sell",
-"past":"sold",
-"participle":"sold"
+	"normal":"sell",
+	"past":"sold",
+	"participle":"sold",
+	"french":"vendre"
 },
-
 {
-"normal":"send",
-"past":"sent",
-"participle":"sent"
+	"normal":"send",
+	"past":"sent",
+	"participle":"sent",
+	"french":"envoyer"
 },
-
 {
-"normal":"show",
-"past":"showed",
-"participle":"shown"
+	"normal":"show",
+	"past":"showed",
+	"participle":"shown",
+	"french":"montrer"
 },
-
 {
-"normal":"shut",
-"past":"shut",
-"participle":"shut"
+	"normal":"shut",
+	"past":"shut",
+	"participle":"shut",
+	"french":"fermer"
 },
-
 {
-"normal":"sing",
-"past":"sang",
-"participle":"sung"
+	"normal":"sing",
+	"past":"sang",
+	"participle":"sung",
+	"french":"chanter"
 },
-
 {
-"normal":"sit",
-"past":"sat",
-"participle":"sat"
+	"normal":"sit",
+	"past":"sat",
+	"participle":"sat",
+	"french":"s'asseoir"
 },
-
 {
-"normal":"sleep",
-"past":"slept",
-"participle":"slept"
+	"normal":"sleep",
+	"past":"slept",
+	"participle":"slept",
+	"french":"dormir"
 },
-
 {
-"normal":"speak",
-"past":"spoke",
-"participle":"spoken"
+	"normal":"speak",
+	"past":"spoke",
+	"participle":"spoken",
+	"french":"parler"
 },
-
 {
-"normal":"spend",
-"past":"spent",
-"participle":"spent"
+	"normal":"spend",
+	"past":"spent",
+	"participle":"spent",
+	"french":"dépenser/utiliser/passer (le temps)"
 },
-
 {
-"normal":"stand",
-"past":"stood",
-"participle":"stood"
+	"normal":"stand",
+	"past":"stood",
+	"participle":"stood",
+	"french":"supporter/se tenir debout/se lever"
 },
-
 {
-"normal":"swim",
-"past":"swam",
-"participle":"swum"
+	"normal":"swim",
+	"past":"swam",
+	"participle":"swum",
+	"french":"nager"
 },
-
 {
-"normal":"take",
-"past":"took",
-"participle":"taken"
+	"normal":"take",
+	"past":"took",
+	"participle":"taken",
+	"french":"prendre"
 },
-
 {
-"normal":"teach",
-"past":"taught",
-"participle":"taught"
+	"normal":"teach",
+	"past":"taught",
+	"participle":"taught",
+	"french":"enseigner"
 },
-
 {
-"normal":"tear",
-"past":"tore",
-"participle":"torn"
+	"normal":"tear",
+	"past":"tore",
+	"participle":"torn",
+	"french":"déchirer"
 },
-
 {
-"normal":"tell",
-"past":"told",
-"participle":"told"
+	"normal":"tell",
+	"past":"told",
+	"participle":"told",
+	"french":"dire à"
 },
-
 {
-"normal":"think",
-"past":"thought",
-"participle":"thought"
+	"normal":"think",
+	"past":"thought",
+	"participle":"thought",
+	"french":"penser"
 },
-
 {
-"normal":"throw",
-"past":"threw",
-"participle":"thrown"
+	"normal":"throw",
+	"past":"threw",
+	"participle":"thrown",
+	"french":"jeter/lancer"
 },
-
 {
-"normal":"understand",
-"past":"understood",
-"participle":"understood"
+	"normal":"understand",
+	"past":"understood",
+	"participle":"understood",
+	"french":"comprendre"
 },
-
 {
-"normal":"wake",
-"past":"woke",
-"participle":"woken"
+	"normal":"wake",
+	"past":"woke",
+	"participle":"woken",
+	"french":"réveiller"
 },
-
 {
-"normal":"wear",
-"past":"wore",
-"participle":"worn"
+	"normal":"wear",
+	"past":"wore",
+	"participle":"worn",
+	"french":"porter (un vêtement)"
 },
-
 {
-"normal":"win",
-"past":"won",
-"participle":"won"
+	"normal":"win",
+	"past":"won",
+	"participle":"won",
+	"french":"gagner"
 },
-
 {
-"normal":"write",
-"past":"wrote",
-"participle":"written"
+	"normal":"write",
+	"past":"wrote",
+	"participle":"written",
+	"french":"écrire"
 }
-	]
+]
 )

@@ -76,6 +76,7 @@ $(function() {
         $("#irregular-verb").text(verb.normal);
         $("#past-verb").text(verb.past);
         $("#past-participle").text(verb.participle);
+        $("#french-verb").text(verb.french);
 
 
         var owl = $("#owl-demo").data('owlCarousel');
@@ -103,6 +104,7 @@ $(function() {
             $("#actual-irregular-verb").text(actualVerb.normal);
             $("#actual-past-verb").text(actualVerb.past);
             $("#actual-past-participle").text(actualVerb.participle);
+            $("#actual-french-verb").text(actualVerb.french);
 
             var owl = $("#owl-actual-verbs").data('owlCarousel');
             owl.goTo(0)
@@ -143,6 +145,7 @@ $(function() {
         resposta = 0;
 
         $("#game-irregular-verb").text(verb.normal);
+        $("#game-french-verb").text(verb.french);
 
         $("#div-game-participle").hide();
         $("#answer-past").val("");
@@ -153,6 +156,7 @@ $(function() {
         $("#msg-verb").text("Verb: " + verb.normal);
         $("#msg-past").text(verb.past);
         $("#msg-participle").text(verb.participle);
+        $("#msg-french").text(verb.french);
 
         updateStatusBar();
     }
