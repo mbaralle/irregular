@@ -383,7 +383,7 @@ geraVerbs([
 	"normal":"lie",
 	"past":"lay",
 	"participle":"lain",
-	"french":"mentir"
+	"french":"être couché/étendu"
 },
 {
 	"normal":"lose",
